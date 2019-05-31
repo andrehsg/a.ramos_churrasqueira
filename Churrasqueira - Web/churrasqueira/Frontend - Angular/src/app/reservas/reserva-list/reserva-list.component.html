@@ -1,0 +1,15 @@
+<p>Disabled datepicker</p>
+
+<ngb-datepicker [(ngModel)]="model" [markDisabled]="isDisabled" (select)="onDateSelection($event)"
+[disabled]="disabled"></ngb-datepicker>
+
+<hr/>
+
+<button type="button" (click)="onReservaPerformed()" class="btn btn-primary" >Reservar</button>
+
+<br><br><br>
+<button class="btn btn-sm btn-outline-{{disabled ? 'danger' : 'success'}}" (click)="disabled = !disabled">
+  {{ disabled ? "disabled" : "enabled"}}
+</button>
+
+
